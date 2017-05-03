@@ -1,0 +1,7 @@
+development:
+  adapter: mysql2
+  host: localhost
+  user: root
+  password: ''
+  database: todo
+  max_connections: 10

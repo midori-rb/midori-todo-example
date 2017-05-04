@@ -10,5 +10,4 @@ gem 'em-midori', require: %w(midori midori/extension/file midori/extension/seque
 gem 'hiredis', '~> 0.6.0'
 gem 'ohm', '~> 3.0'
 gem 'sequel', '~> 4.40', require: false
-gem 'pg', '~> 0.17', require: false
 gem 'mysql2', '~> 0.4', require: false

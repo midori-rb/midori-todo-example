@@ -6,12 +6,18 @@ task 'rubocop' do
   sh 'bundle exec rubocop'
 end
 
-task 'build' do
-  sh 'cd ./frontend; yarn; npm run build'
-end
-
 task 'run' do
   ruby 'main.rb'
+end
+
+namespace :vue do
+  task :install do
+    sh 'cd ./frontend; yarn'
+  end
+
+  task :build do
+    sh 'cd ./frontend; npm run build'
+  end
 end
 
 namespace :db do

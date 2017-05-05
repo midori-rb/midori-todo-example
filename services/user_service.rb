@@ -3,7 +3,7 @@ DIGEST = Digest::SHA2.new
 class UserService
   class << self
     def auth(request)
-      user = UserToken.find(token: request.header['Token'])&.first
+      user = UserToken.find(token: request.header['Token'] || request.header['token'])&.first
       user.nil? ? nil : User.where(id: user.user_id)&.first
     end
 

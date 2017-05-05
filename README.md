@@ -11,6 +11,7 @@ Requirements:
 ```
 $ bundle install
 $ rake db:migrate
-$ rake build
+$ rake vue:install
+$ rake vue:build
 $ rake run
 ```

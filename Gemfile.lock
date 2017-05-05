@@ -20,7 +20,6 @@ GEM
       nest (~> 3)
       redic (~> 1.5.0)
       stal
-    pg (0.20.0)
     rake (12.0.0)
     redic (1.5.0)
       hiredis
@@ -57,7 +56,6 @@ DEPENDENCIES
   hiredis (~> 0.6.0)
   mysql2 (~> 0.4)
   ohm (~> 3.0)
-  pg (~> 0.17)
   rake (~> 12.0)
   rspec (~> 3.0)
   sequel (~> 4.40)

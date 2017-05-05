@@ -27,10 +27,10 @@ export default async (
     data = '';
   }
   if (!res.ok) {
-    throw new Error({
+    throw new Error(JSON.stringify({
       code: res.status,
       data,
-    });
+    }));
   }
   return data;
 };

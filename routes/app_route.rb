@@ -21,7 +21,7 @@ CONTENT_TYPE = {
 
 class AppRoute < Midori::API
   capture Errno::ENOENT do
-    Midori::Response.new(404, {}, 'File not Found')
+    Midori::Response.new(status: 404, body: 'File not Found')
   end
 
   get '*' do
@@ -31,8 +31,8 @@ class AppRoute < Midori::API
     content_type = CONTENT_TYPE[file_path.split('.')[-1]&.to_sym] || 'text/plain'
 
     file = Midori::File.new(file_path, 'r')
-    Midori::Response.new(200,
-                         { 'Content-Type': content_type },
-                         file.read)
+    Midori::Response.new(status: 200,
+                         header: { 'Content-Type': content_type },
+                         body: file.read)
   end
 end

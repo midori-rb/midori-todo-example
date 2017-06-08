@@ -6,7 +6,7 @@ gem 'rspec', '~> 3.0'
 gem 'simplecov', '~> 0.14', require: false, group: :test
 
 gem 'uuid64'
-gem 'em-midori', '~> 0.2.4', require: %w(
+gem 'em-midori', '~> 0.3.0', require: %w(
   midori
   midori/extension/file
   midori/extension/sequel/mysql2

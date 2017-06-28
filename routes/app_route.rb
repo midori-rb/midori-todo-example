@@ -30,7 +30,7 @@ class AppRoute < Midori::API
     raise Errno::ENOENT if File.directory?(file_path)
     content_type = CONTENT_TYPE[file_path.split('.')[-1]&.to_sym] || 'text/plain'
 
-    file = Midori::File.new(file_path, 'r')
+    file = MidoriContrib::File.new(file_path, 'r')
     Midori::Response.new(status: 200,
                          header: { 'Content-Type': content_type },
                          body: file.read)

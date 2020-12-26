@@ -1,4 +1,4 @@
-define_error :unauthorized_error, 
+define_error :unauthorized_error,
              :user_conflict_error
 
 class ErrorRoute < Midori::API

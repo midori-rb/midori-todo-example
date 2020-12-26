@@ -1,7 +1,9 @@
 # midori-todo-example
+
 TODO List example built with midori and Vue.js
 
 Requirements:
+
 - Ruby >= 2.2.6
 - Node >= 6.0
 - Yarn >= 0.22
